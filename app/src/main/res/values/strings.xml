@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="start">page</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="book">book</string>
+    <string name="image">image</string>
+    <string name="stop">save qr</string>
+    <string name="gq">generate qr</string>
+    <string name="editext" />
+    <string name="no_of_tickets">no of tickets</string>
+    <string name="destination">destinaton</string>
+    <string name="source">source</string>
+    <string name="fetch">fetch</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="empty" />
+    <string name="add">add</string>
+    <string name="title_activity_front">front</string>
+    <string name="Register">Register</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="db">database</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="login">Login</string>
+    <string name="pay">Book Tickets</string>
+    <string name="Payment">Payment</string>
+    <string name="Credit">CreditCard</string>
+    <string name="Debit">Debit card</string>
+    <string name="cash">Cash on Delivery</string>
+    <string name="wallet">Pay using wallet</string>
+    <string name="promo">Promotional Codes</string>
+    <string name="scan_barcode">qrscan</string>
+    <string name="password">Enter your Password</string>
+    <string name="e_name">Enter your name</string>
+    <string name="bp">bus-pass</string>
+    <string name="t">ticket</string>
+    <string name="conductor">Conductor</string>
+    <string name="passenger">passenger</string>
+    <string name="Pay">pay</string>
+    <string name="st">View Ticket</string>
+</resources>

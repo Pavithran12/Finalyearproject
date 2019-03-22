@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registerpage"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/head"
+        android:text="@string/Register"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:hint="@string/e_name"
+        android:layout_marginTop="50sp"
+        android:inputType="text"
+        android:layout_marginStart="10sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:hint="Enter your age"
+        android:inputType="number"
+        android:layout_marginTop="100sp"
+        android:layout_marginStart="10sp" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg"
+        android:layout_marginTop="150sp"
+        android:layout_marginStart="10sp">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/male"
+            android:text="@string/male"
+            android:onClick="onRadioButtonClicked" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/female"
+            android:text="@string/female"
+            android:onClick="onRadioButtonClicked" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/others"
+            android:text="@string/others"
+            android:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:hint="Enter your Phone number"
+        android:layout_marginTop="250sp"
+        android:layout_marginStart="10sp"
+        android:inputType="phone"
+        android:importantForAutofill="no" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="Enter your Email id"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="300sp"
+        android:layout_marginStart="10sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:layout_marginTop="350sp"
+        android:layout_marginStart="10sp" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg1"
+        android:layout_marginTop="400sp"
+        android:layout_marginStart="10sp">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bp"
+            android:text="@string/bp"
+            android:onClick="onRadioButtonClicked1" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/t"
+            android:text="@string/t"
+            android:onClick="onRadioButtonClicked1" />
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:text="@string/Register"
+        android:layout_marginTop="500sp"
+        android:layout_marginStart="150sp"
+        android:background="@color/design_default_color_primary"
+        android:backgroundTint="@color/fui_transparent"/>
+</RelativeLayout>

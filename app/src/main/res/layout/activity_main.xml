@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0f0742"
+    >
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="400sp"
+        android:text="@string/conductor"
+        android:shadowColor="#045ae5"
+        android:background="#f90e0e"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="10sp"
+        tools:layout_editor_absoluteY="20sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="300sp"
+        android:layout_marginTop="400sp"
+        android:text="@string/passenger"
+        android:background="#f90e0e"
+        android:shadowColor="#045ae5"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="5sp"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteY="20sp" />
+</RelativeLayout>
