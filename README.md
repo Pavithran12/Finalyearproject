@@ -11,4 +11,7 @@ There are two different login/registration page one for the user and the other f
 QR module:
  zxing api is used to generate the QR code. it takes the source, destination and number of tickets as input. The QR is 200*200 in size which is static and the generated qr will be dynamically change with size of data. the QR can be saved as a image in the mobile external storage to operate it in offline.
  
+ Scanner module:
+   Scanning of QR codes by the conductor is done here.Once the payment process is done by the passesger,the QR code is generated and those codes are scanned for verification.It is the one time verifications
+   
  
