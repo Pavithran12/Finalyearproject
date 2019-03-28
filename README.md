@@ -41,3 +41,7 @@ Payment module
   The payment module is in test mode and the amount will be entered by the user and the saved card details can be used in transaction. The amount will be detected virtually.
 	
 TASK SPLITUP
+
+UI SKELETON DONE BY ROSHINI R
+DATABASE DONE BY ISWARIYA M
+INTEGRATION DONE BY PAVITHRAN M
