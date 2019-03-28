@@ -1,90 +1,43 @@
- Smart Ticketing service using Android
- 	 The Objective of the application is to develop a mobile application to digitalize the ticketing process in public transportation / organization by generating
-a QR code. The QR contains the information of the source and destination. It also provides GPS facility for the users to locate their bus. It also uses the e-wallet for
-the payment process
+																					SMART  E-TICKET IN BUS USING QR CODE
+OBJECTIVE
 
-User authentication:
-  The user information is obtained through the registration and the registered information is used to authenticate the user.
-The database connections are established with interfacing android with a php files that can add and retrieve information from the same.
+The Objective of the application is to develop a mobile application to digitalize the ticketing process in public transportation organization by generating a QR code. The QR contains the information of the source and destination. It also provides gps facility for the users to locate their bus. It also uses the e-wallet for the payment process.
+		 
+		 
+		 
+PROBLEM STATEMENT
 
-
-protected String doInBackground(String... voids) {
- String result = "";
- String places = voids[0];
- String id = voids[1];
- String constr = "http://192.168.43.105/add.php";
- try {
- URL url = new URL(constr);
- HttpURLConnection http = (HttpURLConnection)
-url.openConnection();
- http.setRequestMethod("POST");
- http.setDoInput(true);
- http.setDoOutput(true);
- OutputStream ops = http.getOutputStream();
- BufferedWriter writer = new BufferedWriter(new
-OutputStreamWriter(ops, "UTF-8"));
- String data = URLEncoder.encode("places", "UTF-8") + "=" +
-URLEncoder.encode(places, "UTF-8") + "&&" + URLEncoder.encode("id",
-"UTF-8") + "=" + URLEncoder.encode(id, "UTF-8");
-writer.write(data);
- writer.flush();
- writer.close();
- ops.close();
- InputStream ips = http.getInputStream();
- BufferedReader reader = new BufferedReader(new 
- InputStreamReader(ips, "ISO-8859-1"));
- String line = "";
- while ((line = reader.readLine()) != null) {
- result += line;
- }
- reader.close();
- ips.close();
- http.disconnect();
- return result;
- } catch (MalformedURLException e) {
- result = e.getMessage();
- } catch (IOException e) {
- result = e.getMessage();
- }
- return result;
- }
- }
-
- 
- 
- 
-There are two different login/registration page one for the user and the other for the conductor more or less the information used is the same.
+Digitalize the process of ticket vending in the local bus transport system using mobile application. Track and locate the bus. Automated entry of ticket details
 
 
-QR module:
- zxing api is used to generate the QR code. it takes the source, destination and number of tickets as input. The QR is 200*200 in size which is static and the generated qr will be dynamically change with size of data. the QR can be saved as a image in the mobile external storage to operate it in offline.
- 
- public void onClick(View view) {
- if (message.length() > 0) {
- WindowManager manager = (WindowManager)
-getSystemService(WINDOW_SERVICE);
- Display display = manager.getDefaultDisplay();
- Point point = new Point();
- display.getSize(point);
- int width = point.x;
- int height = point.y;
- int smallerDimension = width < height ? width : height;
- smallerDimension = smallerDimension * 3 / 4;
- qrgEncoder = new QRGEncoder(
- message, null,
- QRGContents.Type.TEXT,
- smallerDimension);
- try {
- bitmap = qrgEncoder.encodeAsBitmap();
- qrImage.setImageBitmap(bitmap);
- } catch (WriterException e) {
- Log.v(TAG, e.toString());
- }
- } else {
- edtValue.setError("Required");
+ABSTRACT
 
- 
- Scanner module:
-   Scanning of QR codes by the conductor is done here.Once the payment process is done by the passesger,the QR code is generated and those codes are scanned for verification.It is the one time verifications
-   
- 
+The project allows the user to pay using the mobile application. e-Ticket is generated in the form of qr Code. The Payment is done through the wallet in the system. The use of paper and cash in the existing system is completely stopped. Data generated in large number, in the event of ticket vending which is used for analysis of the bus route. The tracking system is enabled to locate the bus. The whole system works in a centralized datacenter sharing information from different data sources
+
+
+
+Future Enhancement
+
+This project contributes in providing effective solutions to current transportation system. The mobile phones which are commonly used in everydays life is brought into the system. The ticketing is done with ease through the app. The generated ticket will be in the form of qr code.  The ticket information will allow us to to know better about the usage of a particular route and the organization using the system will be able to understand implement bus based upon the needs. That will profit the organization in many ways.
+The future enhancement of this system will not need a employee to scan the tickets which will be replaced by a scanner that is connected to the automatic doors of the bus.  There will be also image processing which would enable to verify that the scanned data matches with the number of passengers in the bus.
+The smart system enables a better management.
+
+
+Modules
+
+Qr code generation module 
+Database connection modules
+Scanner module 
+Payment module
+
+
+Qr code generation module 
+	The QR code is generated based on the source and destination information provided by the user. It is an bitmap image of static size 200*200.
+Database connection modules
+   The databse is connected with API and the information is  passed to the databse from anddroid.
+Scanner module 
+  The scanner module scans the generated QR and shows the source, destination and number of ticket information.
+Payment module
+  The payment module is in test mode and the amount will be entered by the user and the saved card details can be used in transaction. The amount will be detected virtually.
+	
+TASK SPLITUP
